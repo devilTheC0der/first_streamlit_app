@@ -46,8 +46,6 @@ if streamlit.button('Get fruit Load List'):
   my_cnx.close()
   streamlit.dataframe(my_data_rows)
 
-# dont run anything past here
-streamlit.stop()
 fruit_choice = streamlit.text_input('What fruit would you like information about?')
 def insert_row_snowflake():
   with my_cnx.cursor() as my_cur:
